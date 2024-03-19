@@ -134,12 +134,10 @@ export default {
     },
     async reloadRemoteConfig () {
       this.reloadLoading = true
-
       const remoteConfig = {}
-
-      await this.$api.config.readRemoteConfigStr().then((ret) => { remoteConfig.old = ret })
+      await this.$api.config.readRemoteConfig().then((ret) => { remoteConfig.old = ret })
       await this.$api.config.downloadRemoteConfig()
-      await this.$api.config.readRemoteConfigStr().then((ret) => { remoteConfig.new = ret })
+      await this.$api.config.readRemoteConfig().then((ret) => { remoteConfig.new = ret })
 
       if (remoteConfig.old === remoteConfig.new) {
         this.$message.info('远程配置没有变化，不做任何处理。')
