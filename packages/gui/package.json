@@ -28,6 +28,7 @@
     "compressing": "^1.5.1",
     "core-js": "^3.6.5",
     "electron-baidu-tongji": "^1.0.5",
+    "electron-builder": "^23.0.2",
     "electron-reload": "^1.5.0",
     "electron-store": "^6.0.1",
     "electron-sudo": "^4.0.12",
